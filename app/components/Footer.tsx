@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { FiGithub, FiLinkedin, FiMail, FiExternalLink } from 'react-icons/fi';
 
 export default function Footer() {
@@ -9,10 +10,14 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent-teal rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-4">
+              <Image 
+                src="/cognisiveLogo.png" 
+                alt="CognisiveLabs Logo" 
+                width={40} 
+                height={40}
+                className="rounded-lg"
+              />
               <span className="font-semibold text-xl">CognisiveLabs</span>
             </div>
             <p className="text-neutral-600 dark:text-neutral-400 max-w-md">

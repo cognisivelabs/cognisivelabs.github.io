@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiDatabase, FiFileText, FiArrowUpRight } from 'react-icons/fi';
+import { FiDatabase, FiArrowUpRight } from 'react-icons/fi';
 
 const projects = [
   {
@@ -13,15 +13,6 @@ const projects = [
     gradient: 'from-blue-500 to-cyan-500',
     tags: ['Database', 'JSONB', 'Testing', 'Java'],
     status: 'Phase 3.3 - 540+ Tests Passing',
-  },
-  {
-    id: 'gherkinforge',
-    title: 'GherkinForge',
-    description: 'Transform your Gherkin stories into executable Selenium tests — no coding required',
-    icon: FiFileText,
-    gradient: 'from-purple-500 to-pink-500',
-    tags: ['Testing', 'Selenium', 'Automation', 'BDD'],
-    status: 'Active Development',
   },
 ];
 
@@ -41,7 +32,7 @@ export default function ProjectsPreview() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className={projects.length === 1 ? "max-w-3xl mx-auto" : "grid md:grid-cols-2 gap-8"}>
           {projects.map((project, index) => (
             <motion.div
               key={project.id}

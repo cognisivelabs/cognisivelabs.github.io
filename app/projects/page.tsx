@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiDatabase, FiFileText, FiGithub, FiExternalLink, FiLock } from 'react-icons/fi';
+import { FiDatabase, FiGithub, FiExternalLink, FiLock } from 'react-icons/fi';
 
 const projects = [
   {
@@ -21,25 +21,6 @@ const projects = [
       'Testing framework integrations (JUnit 5, TestNG)',
       'High performance (< 100ms startup, < 1ms queries)',
       'ACID transactions with four isolation levels',
-    ],
-    isPrivate: false,
-  },
-  {
-    id: 'gherkinforge',
-    title: 'GherkinForge',
-    description: 'Transform your Gherkin stories into executable Selenium tests — no coding required.',
-    longDescription: 'GherkinForge automatically generates complete Selenium test suites from Gherkin feature files, allowing QA teams to focus on testing strategy instead of writing repetitive test code.',
-    icon: FiFileText,
-    gradient: 'from-purple-500 to-pink-500',
-    tags: ['Testing', 'Selenium', 'Automation', 'BDD', 'Code Generation'],
-    status: 'Active Development',
-    features: [
-      'Automatic Selenium test suite generation',
-      'Creates Page Object Model classes',
-      'Data-driven testing via Scenario Outlines',
-      'Multi-environment test configuration',
-      'Preserves custom code extensions',
-      'Supports TestNG and JUnit frameworks',
     ],
     isPrivate: false,
   },

@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiArrowLeft, FiGithub, FiExternalLink, FiDatabase, FiFileText, FiLock } from 'react-icons/fi';
+import { FiArrowLeft, FiGithub, FiExternalLink, FiDatabase, FiLock } from 'react-icons/fi';
 import { notFound } from 'next/navigation';
 
 const projectsData = {
@@ -51,52 +51,6 @@ const projectsData = {
       'JSON-heavy application testing',
     ],
     techStack: ['Java 17+', 'SQL', 'JSONB', 'H2 Compatible', 'Apache 2.0'],
-  },
-  gherkinforge: {
-    id: 'gherkinforge',
-    title: 'GherkinForge',
-    subtitle: 'Automated Selenium Test Generation',
-    description: 'Transform your Gherkin stories into executable Selenium tests — no coding required.',
-    icon: FiFileText,
-    gradient: 'from-purple-500 to-pink-500',
-    status: 'Active Development',
-    isPrivate: false,
-    overview: `GherkinForge is an automated testing tool that generates Selenium WebDriver test code directly from Gherkin feature files. It allows QA teams to focus on testing strategy instead of writing repetitive test code, providing a structured and maintainable approach to generating test suites.`,
-    features: [
-      {
-        title: 'Automatic Test Generation',
-        description: 'Generate complete Selenium test suites from Gherkin feature files',
-      },
-      {
-        title: 'Page Object Model',
-        description: 'Creates structured Page Object Model classes automatically',
-      },
-      {
-        title: 'Data-Driven Testing',
-        description: 'Supports Scenario Outlines for parameterized testing',
-      },
-      {
-        title: 'Multi-Environment Support',
-        description: 'Configurable browser and wait strategies for different environments',
-      },
-      {
-        title: 'Modular Code Generation',
-        description: 'Preserves custom extensions and manual code modifications',
-      },
-      {
-        title: 'Framework Flexibility',
-        description: 'Supports multiple testing frameworks including TestNG and JUnit',
-      },
-    ],
-    useCases: [
-      'BDD test automation',
-      'Selenium test suite generation',
-      'QA workflow optimization',
-      'Test maintenance reduction',
-      'Cross-browser testing setup',
-      'Regression testing automation',
-    ],
-    techStack: ['Java', 'Selenium WebDriver', 'TestNG', 'JUnit', 'Page Object Model', 'Gherkin'],
   },
 };
 

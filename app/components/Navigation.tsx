@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -42,10 +43,14 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 to-teal-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">C</span>
-            </div>
+          <Link href="/" className="flex items-center space-x-3">
+            <Image 
+              src="/cognisiveLogo.png" 
+              alt="CognisiveLabs Logo" 
+              width={40} 
+              height={40}
+              className="rounded-lg"
+            />
             <span className="font-semibold text-xl">CognisiveLabs</span>
           </Link>
 
