@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiArrowLeft, FiGithub, FiExternalLink, FiDatabase, FiLock } from 'react-icons/fi';
+import { FiArrowLeft, FiGithub, FiExternalLink, FiDatabase } from 'react-icons/fi';
 import { notFound } from 'next/navigation';
 
 const projectsData = {
