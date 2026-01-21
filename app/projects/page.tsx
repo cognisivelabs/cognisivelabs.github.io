@@ -16,29 +16,29 @@ const projects = [
   {
     title: 'G-Mock',
     category: 'DevOps Tool (Go)',
-    description: 'The "Single-Binary" Mock Server. Unlike GripMock or Prism, G-Mock offers zero-config live-reload and a native Go DX, allowing teams to simulate complex gRPC/REST backends with zero runtime dependencies.',
-    tech: ['Go', 'gRPC', 'Live-Reload'],
+    description: 'The "Single-Binary" Mock Server. We chose Go for its zero-dependency distribution—allowing teams to run high-performance gRPC/REST mocks on any CI/CD environment without installing a language runtime.',
+    tech: ['Go', 'gRPC', 'Single-Binary'],
     github: 'https://github.com/cognisivelabs/g-mock',
     status: 'ALPHA',
-    achievements: ['Zero-Dependency Binary', 'Real-time Mock Hot-Swap', 'OpenAPI/Proto Support']
+    achievements: ['Zero-Dependency Distribution', 'Real-time Mock Hot-Swap', 'Native gRPC Support']
   },
   {
     title: 'G-Env',
     category: 'Security Tool (Go)',
-    description: 'The "Truth" for your Environments. It goes beyond dotenv-linter by actively synchronizing and validating local environments against codebase usage, ensuring secrets never leak and configurations never drift.',
-    tech: ['Go', 'Security Scanner', 'CLI'],
+    description: 'The "Portable" Environment Sync. Built in Go to ensure total portability. G-Env validates and syncs local environments against codebase usage with a faster startup than Node, specifically for sub-second CLI feedback loops.',
+    tech: ['Go', 'Security CLI', 'Native Binary'],
     github: 'https://github.com/cognisivelabs/g-env',
     status: 'PROTOTYPE',
-    achievements: ['Code-to-Env Mapping', 'Leak Prevention', 'Environment Syncing']
+    achievements: ['Sub-second Validation', 'Zero-Leaks Scanner', 'Environment Git-Sync']
   },
   {
     title: 'K-Forge',
     category: 'Engineering Library',
-    description: 'Scenario-based Data Factories for Kotlin. While Faker generates random data, K-Forge generates meaningful object scenarios (e.g., "Premier Tier Tenant"), slashing test boilerplate by 60%.',
-    tech: ['Kotlin', 'Type-Safe DSL', 'Testing'],
+    description: 'Type-Safe Data Factories for the JVM. We selected Kotlin to leverage its powerful DSL capabilities, enabling developers to build complex test scenarios for Enterprise Java/Kotlin systems with 100% type safety.',
+    tech: ['Kotlin', 'Type-Safe DSL', 'JVM'],
     github: 'https://github.com/cognisivelabs/k-forge',
     status: 'PROTOTYPE',
-    achievements: ['Scenario-First API', 'JVM Object Graph Support', 'Template-based Generation']
+    achievements: ['Kotlin-First DSL', 'JVM Object Graph Support', 'Enterprise Test Factory']
   }
 ];
 
