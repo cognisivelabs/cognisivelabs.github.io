@@ -6,7 +6,7 @@ import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 const projects = [
   {
     title: 'T-Submit',
-    category: 'Managed Product (TypeScript)',
+    category: 'Managed Product',
     description: 'The "Ultra-Fast" Form Backend. A TypeScript MicroSaaS built natively on Bun, leveraging its high-performance HTTP server to handle 100k+ req/s—outpacing traditional Node.js by 3x. Features built-in SQLite persistence and zero-knowledge encryption.',
     tech: ['TypeScript', 'Bun', 'SQLite'],
     github: 'https://github.com/cognisivelabs/t-submit',
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: 'T-Flow',
-    category: 'Managed Product (TypeScript)',
+    category: 'Managed Product',
     description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises that demand a premium UI/UX but require self-hosting and total data sovereignty. Built with React and Framer Motion for fluid, 60fps interactions.',
     tech: ['React', 'Node.js', 'Framer Motion'],
     github: 'https://github.com/cognisivelabs/t-flow',
@@ -24,7 +24,7 @@ const projects = [
   },
   {
     title: 'G-Mock',
-    category: 'DevOps Tool (Go)',
+    category: 'DevOps Tool',
     description: 'The "Single-Binary" Mock Server. We chose Go for its zero-dependency distribution—allowing teams to run high-performance gRPC/REST mocks on any CI/CD environment without installing a language runtime.',
     tech: ['Go', 'gRPC', 'Single-Binary'],
     github: 'https://github.com/cognisivelabs/g-mock',
@@ -33,7 +33,7 @@ const projects = [
   },
   {
     title: 'G-Env',
-    category: 'Security Tool (Go)',
+    category: 'Security Tool',
     description: 'The "Portable" Environment Sync. Built in Go to ensure total portability. G-Env validates and syncs local environments against codebase usage with a faster startup than Node, specifically for sub-second CLI feedback loops.',
     tech: ['Go', 'Security CLI', 'Native Binary'],
     github: 'https://github.com/cognisivelabs/g-env',
@@ -42,7 +42,7 @@ const projects = [
   },
   {
     title: 'K-Forge',
-    category: 'Engineering Library (Kotlin)',
+    category: 'Engineering Library',
     description: 'Type-Safe Data Factories for the JVM. We selected Kotlin to leverage its powerful DSL capabilities, enabling developers to build complex test scenarios for Enterprise Java/Kotlin systems with 100% type safety.',
     tech: ['Kotlin', 'Type-Safe DSL', 'JVM'],
     github: 'https://github.com/cognisivelabs/k-forge',
