@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiGithub, FiExternalLink, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
+import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 
 const projects = [
   {
@@ -144,7 +144,7 @@ export default function LabsPage() {
           <div className="md:col-span-1">
             <h2 className="text-3xl font-bold mb-6 tracking-tight">From Lab to <span className="text-indigo-600 dark:text-indigo-500">Industry.</span></h2>
             <p className="text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6 italic">
-              "Our products are born in the Labs—not in a board room. We identify repeatable engineering patterns and mature them into hardened, industry-grade tools."
+              &quot;Our products are born in the Labs—not in a board room. We identify repeatable engineering patterns and mature them into hardened, industry-grade tools.&quot;
             </p>
             <div className="flex items-center text-indigo-600 dark:text-indigo-400 text-sm font-bold tracking-widest uppercase">
               <div className="w-8 h-[1px] bg-indigo-500 mr-3" /> Incubation Roadmap

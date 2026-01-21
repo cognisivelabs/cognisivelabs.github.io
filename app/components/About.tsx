@@ -1,25 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiTarget, FiCode, FiTrendingUp } from 'react-icons/fi';
 
-const features = [
-  {
-    icon: FiTarget,
-    title: 'Results-Focused',
-    description: 'Delivering practical solutions that solve real business challenges with measurable impact',
-  },
-  {
-    icon: FiCode,
-    title: 'Modern Technology',
-    description: 'Leveraging cutting-edge tools like Kotlin, React, and microservices for scalable solutions',
-  },
-  {
-    icon: FiTrendingUp,
-    title: 'Proven Leadership',
-    description: 'Successfully leading development teams and delivering complex enterprise projects',
-  },
-];
 
 export default function About() {
   return (

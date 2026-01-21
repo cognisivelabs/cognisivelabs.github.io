@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiLayers, FiCode, FiUsers, FiTrendingUp, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
+import { FiUsers, FiTrendingUp, FiCheckCircle, FiArrowRight } from 'react-icons/fi';
 
 const caseStudies = [
   {
