@@ -16,11 +16,11 @@ const projects = [
   {
     title: 'T-Form',
     category: 'Managed Product',
-    description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises that demand a premium UI/UX but require self-hosting and total data sovereignty. Built with React and Framer Motion for fluid, 60fps interactions.',
-    tech: ['React', 'Node.js', 'Framer Motion'],
+    description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises. Built with Next.js and React 19 in a robust Turborepo monorepo, featuring a drag-and-drop builder and fluid animations.',
+    tech: ['React 19', 'Next.js', 'Turborepo', 'Express'],
     github: 'https://github.com/cognisivelabs/t-form',
     status: 'BETA',
-    achievements: ['Fluid 60fps Transitions', 'Drag-and-Drop Builder', 'Headless Renderer Support']
+    achievements: ['Drag-and-Drop Builder', 'Microservices Architecture', 'React 19 Integration']
   },
   {
     title: 'G-Mock',
