@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
-import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { FiSun, FiMoon } from 'react-icons/fi';
