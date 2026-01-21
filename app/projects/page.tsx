@@ -14,6 +14,15 @@ const projects = [
     achievements: ['70k Req/s Throughput', 'AES-256 Client-Side Encryption', 'Multi-Provider Webhooks']
   },
   {
+    title: 'T-Flow',
+    category: 'Managed Product (React)',
+    description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises that demand a premium UI/UX but require self-hosting and total data sovereignty. Built with React and Framer Motion for fluid, 60fps interactions.',
+    tech: ['React', 'Node.js', 'Framer Motion'],
+    github: 'https://github.com/cognisivelabs/t-flow',
+    status: 'BETA',
+    achievements: ['Fluid 60fps Transitions', 'Drag-and-Drop Builder', 'Headless Renderer Support']
+  },
+  {
     title: 'G-Mock',
     category: 'DevOps Tool (Go)',
     description: 'The "Single-Binary" Mock Server. We chose Go for its zero-dependency distribution—allowing teams to run high-performance gRPC/REST mocks on any CI/CD environment without installing a language runtime.',
