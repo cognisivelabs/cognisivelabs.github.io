@@ -5,6 +5,15 @@ import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 
 const projects = [
   {
+    title: 'T-Submit',
+    category: 'Managed Product (TS)',
+    description: 'The "High-Performance" Form Backend. A TypeScript/Node.js MicroSaaS built on Fastify, capable of 70k+ req/s. It combines the developer velocity of Node.js with enterprise-grade "Zero-Knowledge" encryption.',
+    tech: ['TypeScript', 'Fastify', 'Bun/Node 22'],
+    github: 'https://github.com/cognisivelabs/t-submit',
+    status: 'BETA',
+    achievements: ['70k Req/s Throughput', 'AES-256 Client-Side Encryption', 'Multi-Provider Webhooks']
+  },
+  {
     title: 'G-Mock',
     category: 'DevOps Tool (Go)',
     description: 'The "Single-Binary" Mock Server. Unlike GripMock or Prism, G-Mock offers zero-config live-reload and a native Go DX, allowing teams to simulate complex gRPC/REST backends with zero runtime dependencies.',
@@ -30,15 +39,6 @@ const projects = [
     github: 'https://github.com/cognisivelabs/k-forge',
     status: 'PROTOTYPE',
     achievements: ['Scenario-First API', 'JVM Object Graph Support', 'Template-based Generation']
-  },
-  {
-    title: 'K-Spec',
-    category: 'Engineering Library',
-    description: 'Zero-Config Contract Snapshots. The "Jest for Backend" approach to API protection. Avoid the complexity of Pact/Pact-Broker with automated snapshot-based contract verification.',
-    tech: ['Kotlin', 'Snapshot Testing', 'API Safety'],
-    github: 'https://github.com/cognisivelabs/k-spec',
-    status: 'CONCEPT',
-    achievements: ['Broker-less Verification', 'Breaking-Change Detection', 'Instant Setup']
   }
 ];
 

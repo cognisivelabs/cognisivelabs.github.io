@@ -41,7 +41,7 @@ export default function About() {
                 {[
                   {
                     title: "Cognisive Services",
-                    desc: "High-stakes enterprise delivery, Kotlin microservices, and strategic architecture.",
+                    desc: "High-stakes enterprise delivery, Node.js/JS mastery, Kotlin microservices, and strategic architecture.",
                     icon: "ES"
                   },
                   {
