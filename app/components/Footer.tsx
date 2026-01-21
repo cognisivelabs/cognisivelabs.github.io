@@ -1,100 +1,109 @@
 'use client';
 
+import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { FiGithub, FiLinkedin, FiMail, FiExternalLink } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+
+const footerLinks = {
+  solutions: [
+    { name: 'Enterprise Architecture', href: '/#services' },
+    { name: 'Product Engineering', href: '/#services' },
+    { name: 'Strategic Consulting', href: '/#services' },
+  ],
+  company: [
+    { name: 'About Us', href: '/#about' },
+    { name: 'The Labs', href: '/projects' },
+    { name: 'Contact', href: '/contact' },
+  ],
+  legal: [
+    { name: 'Privacy', href: '#' },
+    { name: 'Terms', href: '#' },
+  ],
+  social: [
+    { name: 'GitHub', href: 'https://github.com/cognisivelabs', icon: FiGithub },
+    { name: 'LinkedIn', href: '#', icon: FiLinkedin },
+    { name: 'Twitter', href: '#', icon: FiTwitter },
+  ],
+};
 
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-neutral-50 dark:bg-neutral-900/50 border-t border-neutral-200 dark:border-neutral-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
-          <div className="col-span-2">
-            <div className="flex items-center space-x-3 mb-4">
-              <Image 
-                src="/cognisiveLogo.png" 
-                alt="CognisiveLabs Logo" 
-                width={40} 
-                height={40}
-                className="rounded-lg"
-              />
-              <span className="font-semibold text-xl">CognisiveLabs</span>
-            </div>
-            <p className="text-neutral-600 dark:text-neutral-400 max-w-md">
-              Building innovative solutions for consulting companies. 
-              Part of the Cognisive family.
+    <footer className="bg-white dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800 pt-20 pb-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
+          <div className="col-span-2 lg:col-span-2">
+            <Link href="/" className="flex items-center mb-6 group">
+              <span className="text-3xl font-bold tracking-tighter text-neutral-900 dark:text-white group-hover:text-indigo-600 transition-colors uppercase">
+                COGNISIVE
+              </span>
+            </Link>
+            <p className="text-neutral-500 dark:text-neutral-400 mb-8 max-w-xs font-light leading-relaxed">
+              Enterprise stability powered by continuous innovation. Delivering
+              technical excellence through services and the Labs.
             </p>
+            <div className="flex space-x-5">
+              {footerLinks.social.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className="text-neutral-400 hover:text-indigo-600 transition-colors"
+                  aria-label={item.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <item.icon size={20} />
+                </a>
+              ))}
+            </div>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2 text-neutral-600 dark:text-neutral-400">
-              <li>
-                <Link href="/" className="hover:text-primary transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/projects" className="hover:text-primary transition-colors">
-                  Projects
-                </Link>
-              </li>
-              <li>
-                <Link href="#about" className="hover:text-primary transition-colors">
-                  About
-                </Link>
-              </li>
+            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-950 dark:text-white">Solutions</h4>
+            <ul className="space-y-4 text-sm">
+              {footerLinks.solutions.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-neutral-500 hover:text-indigo-600 transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Connect</h3>
-            <div className="flex space-x-4">
-              <a
-                href="https://github.com/cognisivelabs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
-                aria-label="GitHub"
-              >
-                <FiGithub size={20} />
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
-                aria-label="LinkedIn"
-              >
-                <FiLinkedin size={20} />
-              </a>
-              <a
-                href="mailto:contact@cognisivelabs.com"
-                className="p-2 rounded-lg hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
-                aria-label="Email"
-              >
-                <FiMail size={20} />
-              </a>
-            </div>
+            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-950 dark:text-white">Company</h4>
+            <ul className="space-y-4 text-sm">
+              {footerLinks.company.map((item) => (
+                <li key={item.name}>
+                  <Link href={item.href} className="text-neutral-500 hover:text-indigo-600 transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-950 dark:text-white">Contact</h4>
+            <ul className="space-y-4 text-sm">
+              <li>
+                <a href="mailto:hello@cognisive.co.uk" className="text-neutral-500 hover:text-indigo-600 transition-colors">
+                  hello@cognisive.co.uk
+                </a>
+              </li>
+              <li className="text-neutral-500">United Kingdom</li>
+            </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t border-neutral-200 dark:border-neutral-800">
-          <div className="flex flex-col md:flex-row justify-between items-center text-sm text-neutral-600 dark:text-neutral-400">
-            <p>&copy; {new Date().getFullYear()} CognisiveLabs. All rights reserved.</p>
-            <div className="flex items-center mt-4 md:mt-0">
-              <span className="mr-2">A</span>
-              <a
-                href="https://cognisive.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-semibold hover:text-primary transition-colors inline-flex items-center"
-              >
-                Cognisive
-                <FiExternalLink className="ml-1" size={14} />
-              </a>
-              <span className="ml-2">Company</span>
-            </div>
+        <div className="pt-10 border-t border-neutral-100 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
+          <p>© {new Date().getFullYear()} Cognisive Ltd. All rights reserved.</p>
+          <div className="flex space-x-8 mt-4 md:mt-0">
+            {footerLinks.legal.map((item) => (
+              <Link key={item.name} href={item.href} className="hover:text-neutral-900 dark:hover:text-white transition-colors">
+                {item.name}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

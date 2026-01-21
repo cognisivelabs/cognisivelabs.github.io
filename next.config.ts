@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
   },
   basePath: process.env.NODE_ENV === 'production' ? '' : '',
   trailingSlash: true,
+  transpilePackages: ['framer-motion'],
 };
 
 export default nextConfig;

@@ -1,79 +1,87 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiTarget, FiUsers, FiTrendingUp } from 'react-icons/fi';
+import { FiTarget, FiCode, FiTrendingUp } from 'react-icons/fi';
 
 const features = [
   {
     icon: FiTarget,
-    title: 'Mission-Driven',
-    description: 'Focused on delivering practical, high-impact solutions for real business challenges',
+    title: 'Results-Focused',
+    description: 'Delivering practical solutions that solve real business challenges with measurable impact',
   },
   {
-    icon: FiUsers,
-    title: 'Client-Centric',
-    description: 'Building tools that consulting companies actually need and want to use daily',
+    icon: FiCode,
+    title: 'Modern Technology',
+    description: 'Leveraging cutting-edge tools like Kotlin, React, and microservices for scalable solutions',
   },
   {
     icon: FiTrendingUp,
-    title: 'Innovation-Led',
-    description: 'Leveraging cutting-edge technology to create tomorrow&apos;s business solutions',
+    title: 'Proven Leadership',
+    description: 'Successfully leading development teams and delivering complex enterprise projects',
   },
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-neutral-50 dark:bg-neutral-900/50">
+    <section id="about" className="py-24 bg-white dark:bg-neutral-950 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-6">
-              About <span className="gradient-text">CognisiveLabs</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+              Engineering <br />
+              <span className="gradient-text">Beyond Consulting.</span>
             </h2>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400 mb-6">
-              CognisiveLabs is the innovation arm of Cognisive, a leading consulting company. 
-              We develop cutting-edge products and tools that help consulting companies streamline 
-              their operations and deliver better results for their clients.
-            </p>
-            <p className="text-lg text-neutral-600 dark:text-neutral-400">
-              Our team combines deep consulting expertise with technical innovation to create 
-              solutions that address real-world business challenges. We believe in building 
-              tools that are not just powerful, but also intuitive and enjoyable to use.
-            </p>
+            <div className="space-y-6 text-xl text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
+              <p>
+                Cognisive is a specialized technology firm focused on delivering
+                robust, enterprise-grade solutions across the financial and digital landscape.
+              </p>
+              <p>
+                We operate with a dual-model: <strong className="font-bold text-neutral-900 dark:text-white">Cognisive</strong> provides the steady hands and
+                strategic architectural oversight for complex enterprise delivery, while <strong className="font-bold text-neutral-900 dark:text-white">CognisiveLabs</strong> serves as our research engine, incubating the experimental
+                products and tools that become tomorrow&apos;s standards.
+              </p>
+            </div>
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="space-y-6"
+            className="relative"
           >
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="flex gap-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary to-accent-teal flex items-center justify-center text-white">
-                    <feature.icon size={20} />
+            <div className="glass-effect p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-2xl relative z-10">
+              <div className="grid grid-cols-1 gap-6">
+                {[
+                  {
+                    title: "Cognisive Services",
+                    desc: "High-stakes enterprise delivery, Kotlin microservices, and strategic architecture.",
+                    icon: "ES"
+                  },
+                  {
+                    title: "CognisiveLabs",
+                    desc: "Open-source R&D hub where we experiment with next-gen engineering tools.",
+                    icon: "CL"
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="p-6 rounded-2xl bg-neutral-50 dark:bg-neutral-900 border border-neutral-100 dark:border-neutral-800 hover:border-indigo-500/30 transition-all">
+                    <div className="flex items-center space-x-4 mb-3">
+                      <span className="w-10 h-10 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-xs">
+                        {item.icon}
+                      </span>
+                      <h4 className="font-bold text-lg">{item.title}</h4>
+                    </div>
+                    <p className="text-sm text-neutral-500 font-light">{item.desc}</p>
                   </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                  <p className="text-neutral-600 dark:text-neutral-400">
-                    {feature.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                ))}
+              </div>
+            </div>
+            {/* Background Accent */}
+            <div className="absolute -top-10 -right-10 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl" />
           </motion.div>
         </div>
       </div>
