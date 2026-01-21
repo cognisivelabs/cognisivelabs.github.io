@@ -6,12 +6,12 @@ import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 const projects = [
   {
     title: 'T-Submit',
-    category: 'Managed Product (TS)',
-    description: 'The "High-Performance" Form Backend. A TypeScript/Node.js MicroSaaS built on Fastify, capable of 70k+ req/s. It combines the developer velocity of Node.js with enterprise-grade "Zero-Knowledge" encryption.',
-    tech: ['TypeScript', 'Fastify', 'Bun/Node 22'],
+    category: 'Managed Product (Bun)',
+    description: 'The "Ultra-Fast" Form Backend. A TypeScript MicroSaaS built natively on Bun, leveraging its high-performance HTTP server to handle 100k+ req/s—outpacing traditional Node.js by 3x. Features built-in SQLite persistence and zero-knowledge encryption.',
+    tech: ['TypeScript', 'Bun', 'SQLite'],
     github: 'https://github.com/cognisivelabs/t-submit',
     status: 'BETA',
-    achievements: ['70k Req/s Throughput', 'AES-256 Client-Side Encryption', 'Multi-Provider Webhooks']
+    achievements: ['100k+ Req/s Throughput', 'Native SQLite Integration', 'Zero-Knowledge Security']
   },
   {
     title: 'T-Flow',
