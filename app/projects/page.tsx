@@ -6,7 +6,7 @@ import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 const projects = [
   {
     title: 'T-Submit',
-    category: 'Managed Product (Bun)',
+    category: 'Managed Product (TypeScript)',
     description: 'The "Ultra-Fast" Form Backend. A TypeScript MicroSaaS built natively on Bun, leveraging its high-performance HTTP server to handle 100k+ req/s—outpacing traditional Node.js by 3x. Features built-in SQLite persistence and zero-knowledge encryption.',
     tech: ['TypeScript', 'Bun', 'SQLite'],
     github: 'https://github.com/cognisivelabs/t-submit',
@@ -15,7 +15,7 @@ const projects = [
   },
   {
     title: 'T-Flow',
-    category: 'Managed Product (React)',
+    category: 'Managed Product (TypeScript)',
     description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises that demand a premium UI/UX but require self-hosting and total data sovereignty. Built with React and Framer Motion for fluid, 60fps interactions.',
     tech: ['React', 'Node.js', 'Framer Motion'],
     github: 'https://github.com/cognisivelabs/t-flow',
