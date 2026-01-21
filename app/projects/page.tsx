@@ -42,7 +42,7 @@ const projects = [
   },
   {
     title: 'K-Forge',
-    category: 'Engineering Library',
+    category: 'Engineering Library (Kotlin)',
     description: 'Type-Safe Data Factories for the JVM. We selected Kotlin to leverage its powerful DSL capabilities, enabling developers to build complex test scenarios for Enterprise Java/Kotlin systems with 100% type safety.',
     tech: ['Kotlin', 'Type-Safe DSL', 'JVM'],
     github: 'https://github.com/cognisivelabs/k-forge',
