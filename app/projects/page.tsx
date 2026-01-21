@@ -14,11 +14,11 @@ const projects = [
     achievements: ['100k+ Req/s Throughput', 'Native SQLite Integration', 'Zero-Knowledge Security']
   },
   {
-    title: 'T-Flow',
+    title: 'T-Form',
     category: 'Managed Product',
     description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises that demand a premium UI/UX but require self-hosting and total data sovereignty. Built with React and Framer Motion for fluid, 60fps interactions.',
     tech: ['React', 'Node.js', 'Framer Motion'],
-    github: 'https://github.com/cognisivelabs/t-flow',
+    github: 'https://github.com/cognisivelabs/t-form',
     status: 'BETA',
     achievements: ['Fluid 60fps Transitions', 'Drag-and-Drop Builder', 'Headless Renderer Support']
   },
