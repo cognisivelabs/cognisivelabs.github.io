@@ -11,11 +11,24 @@ export default function ContactPage() {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission logic here
+    setIsSubmitting(true);
+
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 1500));
+
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+
+    // Reset form
+    setFormData({ name: '', email: '', company: '', message: '' });
+
+    // Hide success message after 5 seconds
+    setTimeout(() => setIsSubmitted(false), 5000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -50,7 +63,23 @@ export default function ContactPage() {
             transition={{ delay: 0.2 }}
             className="glass-effect p-8 md:p-12 rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-xl"
           >
-            <form onSubmit={handleSubmit} className="space-y-8">
+            <form onSubmit={handleSubmit} className="space-y-8 relative">
+              {isSubmitted && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/90 dark:bg-neutral-950/90 backdrop-blur-sm rounded-3xl text-center p-8"
+                >
+                  <div className="w-16 h-16 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mb-6">
+                    <FiCheckCircle size={32} />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
+                  <p className="text-neutral-500 font-light max-w-xs">
+                    Thank you for reaching out. A member of our team will be in touch shortly.
+                  </p>
+                </motion.div>
+              )}
+
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <label htmlFor="name" className="block text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Name</label>
@@ -109,10 +138,11 @@ export default function ContactPage() {
 
               <button
                 type="submit"
-                className="inline-flex items-center justify-center px-10 py-4 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition-all group shadow-lg shadow-indigo-600/20"
+                disabled={isSubmitting}
+                className={`inline-flex items-center justify-center px-10 py-4 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition-all group shadow-lg shadow-indigo-600/20 disabled:opacity-50 disabled:cursor-not-allowed`}
               >
-                Send Message
-                <FiSend className="ml-2 group-hover:translate-x-1 transition-transform" />
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+                <FiSend className={`ml-2 ${isSubmitting ? 'animate-pulse' : 'group-hover:translate-x-1'} transition-transform`} />
               </button>
             </form>
           </motion.div>
