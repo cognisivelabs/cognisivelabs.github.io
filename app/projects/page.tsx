@@ -3,53 +3,7 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 
-const projects = [
-  {
-    title: 'T-Submit',
-    category: 'Managed Product',
-    description: 'The "Ultra-Fast" Form Backend. A TypeScript MicroSaaS built natively on Bun, leveraging its high-performance HTTP server to handle 100k+ req/s—outpacing traditional Node.js by 3x. Features built-in SQLite persistence and zero-knowledge encryption.',
-    tech: ['TypeScript', 'Bun', 'SQLite'],
-    github: 'https://github.com/cognisivelabs/t-submit',
-    status: 'BETA',
-    achievements: ['100k+ Req/s Throughput', 'Native SQLite Integration', 'Zero-Knowledge Security']
-  },
-  {
-    title: 'T-Form',
-    category: 'Managed Product',
-    description: 'The "Experience-First" Form Builder. A high-end Typeform clone designed for enterprises. Built with Next.js and React 19 in a robust Turborepo monorepo, featuring a drag-and-drop builder and fluid animations.',
-    tech: ['React 19', 'Next.js', 'Turborepo', 'Express'],
-    github: 'https://github.com/cognisivelabs/t-form',
-    status: 'BETA',
-    achievements: ['Drag-and-Drop Builder', 'Microservices Architecture', 'React 19 Integration']
-  },
-  {
-    title: 'G-Mock',
-    category: 'DevOps Tool',
-    description: 'The "Single-Binary" Mock Server. We chose Go for its zero-dependency distribution—allowing teams to run high-performance gRPC/REST mocks on any CI/CD environment without installing a language runtime.',
-    tech: ['Go', 'gRPC', 'Single-Binary'],
-    github: 'https://github.com/cognisivelabs/g-mock',
-    status: 'ALPHA',
-    achievements: ['Zero-Dependency Distribution', 'Real-time Mock Hot-Swap', 'Native gRPC Support']
-  },
-  {
-    title: 'G-Env',
-    category: 'Security Tool',
-    description: 'The "Portable" Environment Sync. Built in Go to ensure total portability. G-Env validates and syncs local environments against codebase usage with a faster startup than Node, specifically for sub-second CLI feedback loops.',
-    tech: ['Go', 'Security CLI', 'Native Binary'],
-    github: 'https://github.com/cognisivelabs/g-env',
-    status: 'PROTOTYPE',
-    achievements: ['Sub-second Validation', 'Zero-Leaks Scanner', 'Environment Git-Sync']
-  },
-  {
-    title: 'K-Forge',
-    category: 'Engineering Library',
-    description: 'Type-Safe Data Factories for the JVM. We selected Kotlin to leverage its powerful DSL capabilities, enabling developers to build complex test scenarios for Enterprise Java/Kotlin systems with 100% type safety.',
-    tech: ['Kotlin', 'Type-Safe DSL', 'JVM'],
-    github: 'https://github.com/cognisivelabs/k-forge',
-    status: 'PROTOTYPE',
-    achievements: ['Kotlin-First DSL', 'JVM Object Graph Support', 'Enterprise Test Factory']
-  }
-];
+const projects = [];
 
 export default function LabsPage() {
   return (
