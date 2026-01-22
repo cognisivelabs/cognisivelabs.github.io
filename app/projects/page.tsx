@@ -3,7 +3,17 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
 
-const projects = [];
+interface Project {
+  title: string;
+  category: string;
+  description: string;
+  tech: string[];
+  github: string;
+  status: string;
+  achievements: string[];
+}
+
+const projects: Project[] = [];
 
 export default function LabsPage() {
   return (
