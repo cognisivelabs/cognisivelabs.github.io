@@ -13,7 +13,17 @@ interface Project {
   achievements: string[];
 }
 
-const projects: Project[] = [];
+const projects: Project[] = [
+  {
+    title: 'G-Flow',
+    category: 'DevOps Tool',
+    description: 'The "Zero-Config" Service Mapper. A high-performance Go utility that intercepts network traffic at the kernel level to map Docker service-to-service calls in real-time—requiring zero code changes or instrumentation.',
+    tech: ['Go', 'Packet Sniffing', 'Docker SDK', 'Next.js'],
+    github: 'https://github.com/cognisivelabs/g-flow',
+    status: 'IN-PROGRESS',
+    achievements: ['Zero-Instrumentation Mapping', 'Real-time Traffic Visualization', 'Docker Bridge Sniffing']
+  }
+];
 
 export default function LabsPage() {
   return (
