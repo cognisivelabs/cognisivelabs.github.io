@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { FiGithub, FiCode, FiBox, FiCpu, FiPlus } from 'react-icons/fi';
+import { FiGithub, FiCode, FiBox, FiCpu, FiPlus, FiGlobe } from 'react-icons/fi';
 
 interface Project {
   title: string;
@@ -11,6 +11,7 @@ interface Project {
   github: string;
   status: string;
   achievements: string[];
+  website?: string;
 }
 
 const projects: Project[] = [
@@ -22,6 +23,16 @@ const projects: Project[] = [
     github: 'https://github.com/cognisivelabs/g-flow',
     status: 'IN-PROGRESS',
     achievements: ['Zero-Instrumentation Mapping', 'Real-time Traffic Visualization', 'Docker Bridge Sniffing']
+  },
+  {
+    title: 'React Sequence Kit',
+    category: 'React Library',
+    description: 'A high-performance, customizable, and headless-capable Sequence Diagram library for React. Built with SVG for crisp rendering at any scale.',
+    tech: ['React', 'TypeScript', 'SVG', 'Headless UI'],
+    github: 'https://github.com/cognisivelabs/react-sequence-kit',
+    website: 'https://cognisivelabs.github.io/react-sequence-kit/',
+    status: 'BETA',
+    achievements: ['Headless Architecture', 'Infinite Canvas', 'Auto-Layout Engine', 'Export to SVG/PNG']
   }
 ];
 
@@ -64,11 +75,23 @@ export default function LabsPage() {
                     <span className="text-[10px] font-mono tracking-widest text-indigo-600 dark:text-indigo-400 uppercase bg-indigo-500/10 px-2 py-1 rounded">
                       {project.category}
                     </span>
-                    <h3 className="text-3xl font-bold mt-4 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                      {project.title}
-                    </h3>
+                    <a
+                      href={project.website || project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group-hover:opacity-75 transition-opacity"
+                    >
+                      <h3 className="text-3xl font-bold mt-4 leading-tight group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        {project.title}
+                      </h3>
+                    </a>
                   </div>
                   <div className="flex space-x-3">
+                    {project.website && (
+                      <a href={project.website} target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-colors shadow-sm text-indigo-600 dark:text-indigo-400">
+                        <FiGlobe size={20} />
+                      </a>
+                    )}
                     <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-3 bg-white dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl hover:bg-neutral-50 dark:hover:bg-neutral-700 transition-colors shadow-sm">
                       <FiGithub size={20} />
                     </a>
