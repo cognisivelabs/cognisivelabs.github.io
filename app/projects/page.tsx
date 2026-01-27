@@ -16,13 +16,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'G-Flow',
+    title: 'Docker Service Flow',
     category: 'DevOps Tool',
     description: 'The "Zero-Config" Service Mapper. A high-performance Go utility that intercepts network traffic at the kernel level to map Docker service-to-service calls in real-time—requiring zero code changes or instrumentation.',
     tech: ['Go', 'Packet Sniffing', 'Docker SDK', 'Next.js'],
-    github: 'https://github.com/cognisivelabs/g-flow',
+    github: 'https://github.com/cognisivelabs/docker-service-flow',
     status: 'IN-PROGRESS',
     achievements: ['Zero-Instrumentation Mapping', 'Real-time Traffic Visualization', 'Docker Bridge Sniffing']
+  },
+  {
+    title: 'Recall CLI',
+    category: 'DevOps Tool',
+    description: 'Your external memory for the Terminal. A Git-Ops native command manager that replaces history with context-aware recall, team sync, and a beautiful TUI.',
+    tech: ['Go', 'Bubbletea', 'SQLite', 'Cobra'],
+    github: 'https://github.com/cognisivelabs/recall-cli',
+    status: 'BETA',
+    achievements: ['Natural Language Search', 'Git-Ops Sync', 'Context Awareness']
   },
   {
     title: 'React Sequence Kit',
