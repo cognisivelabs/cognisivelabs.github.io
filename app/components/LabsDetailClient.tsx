@@ -6,6 +6,7 @@ import Link from 'next/link';
 import 'katex/dist/katex.min.css';
 
 interface LabsDetailClientProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     project: any;
 }
 
@@ -57,6 +58,7 @@ export default function LabsDetailClient({ project }: LabsDetailClientProps) {
 
                 {/* Deep Dive Grid / Paper Sections */}
                 <div className={isPaper ? 'space-y-20' : 'grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 md:gap-y-24'}>
+                    {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                     {project.details.map((detail: any, index: number) => (
                         <div key={index} className="space-y-6">
                             <div className="flex items-baseline space-x-4">

@@ -1,23 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { HiMenu, HiX } from 'react-icons/hi';
 import { FiSun, FiMoon } from 'react-icons/fi';
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  // Robust check for /projects/ or /projects
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isDark) {

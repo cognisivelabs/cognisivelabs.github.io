@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { InlineMath, BlockMath } from 'react-katex';
 import LabsDetailClient from '../../components/LabsDetailClient';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const projectData: Record<string, any> = {
     'semantic-canvas': {
         title: 'Semantic Canvas',
@@ -71,8 +72,8 @@ const projectData: Record<string, any> = {
                 title: 'The Challenge of Indivisible Chores',
                 content: (
                     <div className="space-y-4">
-                        <p>In classical economics, "goods" hold positive utility and can often be divided. Household chores, however, are <strong>"indivisible chores with negative utility."</strong> They cannot be perfectly split without significant coordination overhead, and different household members hold different disutilities (levels of dread) for the same task.</p>
-                        <p>Furthermore, as explored in <em>"Housework War: A Game Theory Exploration"</em> (Chen, 2022), domestic labor is heavily influenced by social norms and behavioral game theory, where players may default to specific roles to avoid conflict. Our engine seeks to break these inefficient equilibria using rigorous mathematical allocation.</p>
+                        <p>In classical economics, &quot;goods&quot; hold positive utility and can often be divided. Household chores, however, are <strong>&quot;indivisible chores with negative utility.&quot;</strong> They cannot be perfectly split without significant coordination overhead, and different household members hold different disutilities (levels of dread) for the same task.</p>
+                        <p>Furthermore, as explored in <em>&quot;Housework War: A Game Theory Exploration&quot;</em> (Chen, 2022), domestic labor is heavily influenced by social norms and behavioral game theory, where players may default to specific roles to avoid conflict. Our engine seeks to break these inefficient equilibria using rigorous mathematical allocation.</p>
                     </div>
                 )
             },
@@ -80,12 +81,12 @@ const projectData: Record<string, any> = {
                 title: 'What We Are Achieving for Whoosturn',
                 content: (
                     <div className="space-y-6">
-                        <p>By implementing these specific academic papers, we are solving the fundamental reasons why traditional “shared to-do lists” fail, upgrading Whoosturn into a self-balancing ecosystem:</p>
+                        <p>By implementing these specific academic papers, we are solving the fundamental reasons why traditional &ldquo;shared to-do lists&rdquo; fail, upgrading Whoosturn into a self-balancing ecosystem:</p>
                         <ul className="list-disc list-inside space-y-4 ml-2 text-sm text-neutral-600 dark:text-neutral-400">
-                            <li><strong>Eliminating the "Not Fair" Argument (Solving Core Envy):</strong> Standard apps breed resentment if assignments feel unequal. By utilizing EFX math, we achieve a state where the household agrees the division is objectively fair, removing the cognitive load of arguing over who does what.</li>
-                            <li><strong>Handling the "I Did the Hardest Thing!" Phenomenon:</strong> Chores are indivisible. When the math proves a fair split is physically impossible on a given day, the engine automatically issues a "Subsidy" (Whoosturn points) to balance the scales, turning friction into a gamified reward.</li>
+                            <li><strong>Eliminating the &quot;Not Fair&quot; Argument (Solving Core Envy):</strong> Standard apps breed resentment if assignments feel unequal. By utilizing EFX math, we achieve a state where the household agrees the division is objectively fair, removing the cognitive load of arguing over who does what.</li>
+                            <li><strong>Handling the &quot;I Did the Hardest Thing!&quot; Phenomenon:</strong> Chores are indivisible. When the math proves a fair split is physically impossible on a given day, the engine automatically issues a &quot;Subsidy&quot; (Whoosturn points) to balance the scales, turning friction into a gamified reward.</li>
                             <li><strong>Adapting to Real Humans, Not Robots:</strong> Math assumes everyone hates scrubbing toilets equally. Our behavioral layer learns <em>how much</em> a specific user dreads a task, adjusting allocations so the person who minds a chore the least does it the most, maximizing overall household peace.</li>
-                            <li><strong>Preventing the "Bad Luck" Streak:</strong> A random algorithm might give someone the worst chore three weeks in a row. Our engine has a memory, guaranteeing cumulative temporal fairness—if you had a heavy load this week, the math owes you a lighter load next week.</li>
+                            <li><strong>Preventing the &quot;Bad Luck&quot; Streak:</strong> A random algorithm might give someone the worst chore three weeks in a row. Our engine has a memory, guaranteeing cumulative temporal fairness—if you had a heavy load this week, the math owes you a lighter load next week.</li>
                         </ul>
                     </div>
                 )
@@ -100,13 +101,13 @@ const projectData: Record<string, any> = {
                             <div className="p-6 bg-neutral-50 dark:bg-neutral-900 rounded-xl space-y-4">
                                 <h4 className="font-serif text-xl border-b border-neutral-200 dark:border-neutral-800 pb-2">1. Strict Fairness (EFX)</h4>
                                 <p className="text-sm leading-relaxed"><strong>Basis:</strong> <em>EFX Allocations for Indivisible Chores</em> (Kobayashi et al., 2025).</p>
-                                <p className="text-sm leading-relaxed"><strong>What it provides:</strong> Envy-Free up to any item (EFX). We implement this matching-based approach for small, static households. It guarantees that no partner will ever look at another's list of chores and feel they have a worse deal, even if one chore is removed from the equation.</p>
+                                <p className="text-sm leading-relaxed"><strong>What it provides:</strong> Envy-Free up to any item (EFX). We implement this matching-based approach for small, static households. It guarantees that no partner will ever look at another&apos;s list of chores and feel they have a worse deal, even if one chore is removed from the equation.</p>
                             </div>
 
                             <div className="p-6 bg-neutral-50 dark:bg-neutral-900 rounded-xl space-y-4">
                                 <h4 className="font-serif text-xl border-b border-neutral-200 dark:border-neutral-800 pb-2">2. Efficient Subsidies (PROP+PO)</h4>
                                 <p className="text-sm leading-relaxed"><strong>Basis:</strong> <em>Proportional and Pareto-Optimal Allocation of Chores with Subsidy</em> (Garg et al., 2025).</p>
-                                <p className="text-sm leading-relaxed"><strong>What it provides:</strong> When exact fairness is mathematically impossible due to extreme varying chore sizes, we implement Market-Equilibrium Subsidies. This allocates tasks efficiently (Pareto-Optimal) and issues "virtual points" or subsidies to compensate the partner taking on a mathematically unfair load, ensuring Proportionality (PROP).</p>
+                                <p className="text-sm leading-relaxed"><strong>What it provides:</strong> When exact fairness is mathematically impossible due to extreme varying chore sizes, we implement Market-Equilibrium Subsidies. This allocates tasks efficiently (Pareto-Optimal) and issues &quot;virtual points&quot; or subsidies to compensate the partner taking on a mathematically unfair load, ensuring Proportionality (PROP).</p>
                             </div>
 
                             <div className="p-6 bg-neutral-50 dark:bg-neutral-900 rounded-xl space-y-4">
@@ -118,7 +119,7 @@ const projectData: Record<string, any> = {
                             <div className="p-6 bg-neutral-50 dark:bg-neutral-900 rounded-xl space-y-4">
                                 <h4 className="font-serif text-xl border-b border-neutral-200 dark:border-neutral-800 pb-2">4. Online Stochastic Allocation</h4>
                                 <p className="text-sm leading-relaxed"><strong>Basis:</strong> Online Maximin Share (MMS) Allocation.</p>
-                                <p className="text-sm leading-relaxed"><strong>What it provides:</strong> Real-world homes are chaotic. When an unexpected chore arises (e.g., a spill, a broken appliance), our engine implements an "on-the-fly" algorithm to assign the task fairly without needing to recalculate the entire week's schedule.</p>
+                                <p className="text-sm leading-relaxed"><strong>What it provides:</strong> Real-world homes are chaotic. When an unexpected chore arises (e.g., a spill, a broken appliance), our engine implements an &quot;on-the-fly&quot; algorithm to assign the task fairly without needing to recalculate the entire week&apos;s schedule.</p>
                             </div>
                         </div>
                     </div>
