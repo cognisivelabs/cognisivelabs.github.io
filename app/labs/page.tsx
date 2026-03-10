@@ -57,7 +57,7 @@ export default function LabsPage() {
                 href={`/labs/${project.slug}`}
                 className="block space-y-3"
               >
-                <div className="flex justify-between items-baseline">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-2">
                   <h3 className="text-3xl md:text-4xl font-serif text-neutral-900 dark:text-neutral-100 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                     {project.title}
                   </h3>

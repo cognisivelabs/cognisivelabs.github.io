@@ -27,7 +27,7 @@ export default function ZenDrawPage() {
                             In Development
                         </span>
                     </div>
-                    <h1 className="text-6xl md:text-8xl font-serif tracking-tight text-neutral-900 dark:text-neutral-100">
+                    <h1 className="text-5xl sm:text-6xl md:text-8xl font-serif tracking-tight text-neutral-900 dark:text-neutral-100">
                         ZenDraw
                     </h1>
                     <p className="text-xl md:text-2xl font-light text-neutral-500 dark:text-neutral-400 max-w-2xl leading-relaxed">

@@ -30,7 +30,7 @@ export default function HomeHero() {
                     >
                         Digital Product Studio
                     </motion.span>
-                    <h1 className="text-7xl md:text-9xl font-serif tracking-tighter text-neutral-900 dark:text-neutral-100 leading-[0.9]">
+                    <h1 className="text-6xl sm:text-7xl md:text-9xl font-serif tracking-tighter text-neutral-900 dark:text-neutral-100 leading-[0.9]">
                         Engineering <br />
                         <span className="text-neutral-400 dark:text-neutral-600 italic">what&apos;s next</span>
                     </h1>

@@ -31,8 +31,8 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800 pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
-          <div className="col-span-2 lg:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+          <div className="col-span-1 sm:col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center mb-6 group">
               <span className="text-2xl font-serif tracking-tight text-neutral-900 dark:text-white group-hover:text-indigo-600 transition-colors">
                 Cognisive
@@ -96,9 +96,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-10 border-t border-neutral-100 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500">
-          <p>© {new Date().getFullYear()} Cognisive Ltd. All rights reserved.</p>
-          <div className="flex space-x-8 mt-4 md:mt-0">
+        <div className="pt-10 border-t border-neutral-100 dark:border-neutral-800 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-500 gap-y-4 md:gap-y-0">
+          <p className="text-center md:text-left">© {new Date().getFullYear()} Cognisive Ltd. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center md:justify-end gap-4 md:gap-8">
             {footerLinks.legal.map((item) => (
               <Link key={item.name} href={item.href} className="hover:text-neutral-900 dark:hover:text-white transition-colors">
                 {item.name}
