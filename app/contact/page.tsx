@@ -2,13 +2,13 @@
 
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import { FiMail, FiGithub, FiSend, FiCheckCircle } from 'react-icons/fi';
+import { FiSend, FiCheckCircle } from 'react-icons/fi';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -17,17 +17,10 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simulate API delay
     await new Promise(resolve => setTimeout(resolve, 1500));
-
     setIsSubmitting(false);
     setIsSubmitted(true);
-
-    // Reset form
-    setFormData({ name: '', email: '', company: '', message: '' });
-
-    // Hide success message after 5 seconds
+    setFormData({ name: '', email: '', message: '' });
     setTimeout(() => setIsSubmitted(false), 5000);
   };
 
@@ -39,91 +32,68 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen pt-32 pb-20 bg-white dark:bg-neutral-950">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-20"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
-            Let&apos;s Build <br />
-            <span className="gradient-text">Something Impactful.</span>
-          </h1>
-          <p className="text-xl text-neutral-600 dark:text-neutral-400 max-w-3xl mx-auto font-light leading-relaxed">
-            Whether you need enterprise architectural consulting or want to
-            collaborate on innovation through the Labs, we&apos;re ready.
-          </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+    <div className="pt-48 pb-20 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="space-y-16 md:space-y-24"
+      >
+        <div className="space-y-4">
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="glass-effect p-8 md:p-12 rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-xl"
+            className="text-5xl md:text-7xl font-serif text-neutral-900 dark:text-neutral-100 font-light tracking-tight"
           >
-            <form onSubmit={handleSubmit} className="space-y-8 relative">
-              {isSubmitted && (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/90 dark:bg-neutral-950/90 backdrop-blur-sm rounded-3xl text-center p-8"
-                >
-                  <div className="w-16 h-16 bg-green-500/10 text-green-500 rounded-full flex items-center justify-center mb-6">
-                    <FiCheckCircle size={32} />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Message Sent!</h3>
-                  <p className="text-neutral-500 font-light max-w-xs">
-                    Thank you for reaching out. A member of our team will be in touch shortly.
-                  </p>
-                </motion.div>
-              )}
+            Hi, how can we help?
+          </motion.p>
+        </div>
 
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-0 py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-indigo-600 outline-none transition-colors"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Email</label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-0 py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-indigo-600 outline-none transition-colors"
-                    placeholder="your@email.com"
-                  />
-                </div>
-              </div>
+        <div className="pt-12 border-t border-neutral-100 dark:border-neutral-800">
+          <form onSubmit={handleSubmit} className="max-w-xl space-y-12 relative">
+            {isSubmitted && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="absolute inset-0 z-20 flex flex-col items-center justify-center bg-white/95 dark:bg-neutral-950/95 backdrop-blur-sm text-center"
+              >
+                <FiCheckCircle size={48} className="text-indigo-600 mb-6" />
+                <h3 className="text-3xl font-serif mb-2">Message Sent</h3>
+                <p className="text-neutral-500 font-light">We will be in touch shortly.</p>
+              </motion.div>
+            )}
 
-              <div>
-                <label htmlFor="company" className="block text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Company</label>
+            <div className="space-y-8">
+              <div className="space-y-2">
+                <label htmlFor="name" className="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400">Name</label>
                 <input
                   type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
+                  id="name"
+                  name="name"
+                  required
+                  value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-0 py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-indigo-600 outline-none transition-colors"
-                  placeholder="Your organization"
+                  className="w-full text-xl md:text-2xl bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-neutral-900 dark:focus:border-white outline-none py-2 transition-colors font-light"
+                  placeholder="Your Name"
                 />
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-bold uppercase tracking-widest text-neutral-500 mb-2">Message</label>
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full text-xl md:text-2xl bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-neutral-900 dark:focus:border-white outline-none py-2 transition-colors font-light"
+                  placeholder="name@company.com"
+                />
+              </div>
+
+              <div className="space-y-2">
+                <label htmlFor="message" className="text-xs font-mono uppercase tracking-[0.2em] text-neutral-400">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -131,68 +101,29 @@ export default function ContactPage() {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full px-0 py-3 bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-indigo-600 outline-none transition-colors resize-none"
+                  className="w-full text-xl md:text-2xl bg-transparent border-b border-neutral-200 dark:border-neutral-800 focus:border-neutral-900 dark:focus:border-white outline-none py-2 transition-colors font-light resize-none"
                   placeholder="How can we help?"
                 />
               </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`inline-flex items-center justify-center px-10 py-4 bg-indigo-600 text-white rounded-xl font-bold hover:bg-indigo-700 transition-all group shadow-lg shadow-indigo-600/20 disabled:opacity-50 disabled:cursor-not-allowed`}
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-                <FiSend className={`ml-2 ${isSubmitting ? 'animate-pulse' : 'group-hover:translate-x-1'} transition-transform`} />
-              </button>
-            </form>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4 }}
-            className="space-y-12"
-          >
-            <div>
-              <h3 className="text-2xl font-bold mb-8">Process & Delivery</h3>
-              <div className="space-y-6">
-                {[
-                  { title: "Discovery", desc: "Deep dive into your architectural challenges." },
-                  { title: "Blueprint", desc: "Detailed system design and execution strategy." },
-                  { title: "Delivery", desc: "High-velocity development using Kotlin & React." }
-                ].map((step, i) => (
-                  <div key={i} className="flex space-x-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-600/10 text-indigo-600 flex items-center justify-center font-bold text-xs">
-                      {i + 1}
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-lg">{step.title}</h4>
-                      <p className="text-neutral-500 font-light">{step.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
-            <div className="p-8 rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50">
-              <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-500">Contact Details</h4>
-              <div className="space-y-4">
-                <a href="mailto:hello@cognisive.co.uk" className="flex items-center text-lg hover:text-indigo-600 transition-colors">
-                  <FiMail className="mr-3" /> hello@cognisive.co.uk
-                </a>
-                <a href="https://github.com/cognisivelabs" target="_blank" rel="noopener noreferrer" className="flex items-center text-lg hover:text-indigo-600 transition-colors">
-                  <FiGithub className="mr-3" /> @cognisivelabs
-                </a>
-              </div>
-            </div>
-
-            <div className="flex items-center space-x-2 text-sm text-green-600 font-medium">
-              <FiCheckCircle />
-              <span>Response guaranteed within 24 hours</span>
-            </div>
-          </motion.div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="text-lg font-mono uppercase tracking-[0.2em] text-neutral-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors flex items-center group cursor-pointer"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+              <FiSend className="ml-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+          </form>
         </div>
-      </div>
-    </main>
+
+        <div className="pt-12 text-sm font-mono uppercase tracking-[0.2em] text-neutral-400">
+          <Link href="/" className="hover:text-neutral-900 dark:hover:text-white transition-colors">
+            ← Back to Index
+          </Link>
+        </div>
+      </motion.div>
+    </div>
   );
 }

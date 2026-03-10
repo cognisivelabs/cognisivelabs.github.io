@@ -6,13 +6,14 @@ import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 
 const footerLinks = {
   solutions: [
-    { name: 'Enterprise Architecture', href: '/#services' },
-    { name: 'Product Engineering', href: '/#services' },
-    { name: 'Strategic Consulting', href: '/#services' },
+    { name: 'QuickForm', href: '/products/quickform' },
+    { name: 'ZenDraw', href: '/products/zendraw' },
+    { name: 'Whoosturn', href: '/products/whoosturn' },
+    { name: 'VerveNote', href: '/products/vervenote' },
   ],
   company: [
-    { name: 'About Us', href: '/#about' },
-    { name: 'The Labs', href: '/projects' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Labs', href: '/labs' },
     { name: 'Contact', href: '/contact' },
   ],
   legal: [
@@ -33,13 +34,12 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2 lg:col-span-2">
             <Link href="/" className="flex items-center mb-6 group">
-              <span className="text-3xl font-bold tracking-tighter text-neutral-900 dark:text-white group-hover:text-indigo-600 transition-colors uppercase">
-                COGNISIVE
+              <span className="text-2xl font-serif tracking-tight text-neutral-900 dark:text-white group-hover:text-indigo-600 transition-colors">
+                Cognisive
               </span>
             </Link>
-            <p className="text-neutral-500 dark:text-neutral-400 mb-8 max-w-xs font-light leading-relaxed">
-              Enterprise stability powered by continuous innovation. Delivering
-              technical excellence through services and the Labs.
+            <p className="text-base font-light text-neutral-500 dark:text-neutral-400 mb-8 max-w-xs leading-relaxed">
+              Precision-engineered software for everyone.
             </p>
             <div className="flex space-x-5">
               {footerLinks.social.map((item) => (
@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-950 dark:text-white">Solutions</h4>
+            <h4 className="text-sm uppercase tracking-widest mb-6 font-mono text-neutral-900 dark:text-white">Solutions</h4>
             <ul className="space-y-4 text-sm">
               {footerLinks.solutions.map((item) => (
                 <li key={item.name}>
@@ -71,7 +71,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-950 dark:text-white">Company</h4>
+            <h4 className="text-sm uppercase tracking-widest mb-6 font-mono text-neutral-900 dark:text-white">Company</h4>
             <ul className="space-y-4 text-sm">
               {footerLinks.company.map((item) => (
                 <li key={item.name}>
@@ -84,7 +84,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold mb-6 text-sm uppercase tracking-widest text-neutral-950 dark:text-white">Contact</h4>
+            <h4 className="text-sm uppercase tracking-widest mb-6 font-mono text-neutral-900 dark:text-white">Contact</h4>
             <ul className="space-y-4 text-sm">
               <li>
                 <a href="mailto:hello@cognisive.co.uk" className="text-neutral-500 hover:text-indigo-600 transition-colors">

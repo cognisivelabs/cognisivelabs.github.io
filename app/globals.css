@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,25 +7,12 @@
 @layer base {
   :root {
     --background: 255 255 255;
-    --foreground: 24 24 27;
-    --primary: 99 102 241;
-    --primary-foreground: 255 255 255;
-    --accent: 20 184 166;
-    --muted: 244 244 245;
-    --muted-foreground: 113 113 122;
-    --border: 228 228 231;
-    --radius: 0.5rem;
+    --foreground: 10 10 10;
   }
 
   .dark {
-    --background: 10 10 10;
-    --foreground: 237 237 237;
-    --primary: 129 140 248;
-    --primary-foreground: 24 24 27;
-    --accent: 45 212 191;
-    --muted: 39 39 42;
-    --muted-foreground: 161 161 170;
-    --border: 63 63 70;
+    --background: 5 5 5;
+    --foreground: 250 250 250;
   }
 
   html {
@@ -31,11 +20,16 @@
   }
 
   body {
-    @apply bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-50 antialiased;
+    @apply bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 antialiased selection:bg-neutral-200 dark:selection:bg-neutral-800;
+    font-family: 'Inter', sans-serif;
   }
 
-  ::selection {
-    @apply bg-indigo-500/20 text-indigo-800 dark:text-indigo-200;
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
   }
 }
 
