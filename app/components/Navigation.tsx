@@ -41,9 +41,9 @@ export default function Navigation() {
       <motion.nav
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="fixed w-full z-50 py-4 sm:py-8 px-4 sm:px-6 lg:px-8 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-sm"
+        className="fixed w-full z-50 py-4 sm:py-8 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-sm"
       >
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
+        <div className="max-w-[120rem] mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-12 2xl:px-24">
           <Link href="/" className="group" onClick={() => setIsMobileMenuOpen(false)}>
             <span className="text-2xl sm:text-3xl font-serif tracking-tight text-neutral-900 dark:text-white group-hover:text-indigo-600 transition-colors">
               Cognisive
