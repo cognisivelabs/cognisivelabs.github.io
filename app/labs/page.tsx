@@ -18,11 +18,6 @@ const projects = [
     slug: 'conversational-ratio',
     title: 'The Conversational Ratio',
     description: 'An applied data-science implementation detailing how the tone and structure of forms impact user safety and completion rates.'
-  },
-  {
-    slug: 'domestic-game-theory',
-    title: 'Domestic Game Theory',
-    description: 'The foundation of Whoosturn. Applying behavioral economic models to household task distribution to optimize for fairness and social harmony.'
   }
 ];
 

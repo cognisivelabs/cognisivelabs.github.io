@@ -29,18 +29,6 @@ const products = [
         ]
     },
     {
-        name: 'Whoosturn',
-        description: 'Household relationship management powered by the @cognisive/social-equilibrium game theory engine. A mathematically perfect, impartial third party for fair task allocation.',
-        href: '/products/whoosturn',
-        status: 'In Development',
-        focus: 'Applied Game Theory',
-        capabilities: [
-            'EFX Equality Thresholds',
-            'Market-Equilibrium Subsidies',
-            'TEF1 Cumulative Fairness'
-        ]
-    },
-    {
         name: 'VerveNote',
         description: 'Minimalist thought laboratory for deep focus. Designed to eliminate digital noise and foster psychological flow during research.',
         href: '/products/vervenote',

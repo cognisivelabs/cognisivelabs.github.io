@@ -8,7 +8,6 @@ const footerLinks = {
   solutions: [
     { name: 'QuickForm', href: '/products/quickform' },
     { name: 'ZenDraw', href: '/products/zendraw' },
-    { name: 'Whoosturn', href: '/products/whoosturn' },
     { name: 'VerveNote', href: '/products/vervenote' },
   ],
   company: [
