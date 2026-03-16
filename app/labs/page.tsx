@@ -19,14 +19,6 @@ export default function LabsPage() {
         animate={{ opacity: 1, y: 0 }}
         className="space-y-16 md:space-y-24"
       >
-        <div className="space-y-4 max-w-3xl">
-          <h2 className="text-3xl md:text-5xl font-serif text-neutral-900 dark:text-neutral-100">
-            Architectural Blueprint
-          </h2>
-          <p className="text-lg text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
-            The mathematical foundation of our software architecture. <strong className="text-indigo-600 dark:text-indigo-400 font-normal hover:text-indigo-500 transition-colors">Please note: Cognisive does not conduct primary R&D. This lab represents an applied engineering translation of existing, peer-reviewed academic research.</strong>
-          </p>
-        </div>
 
         <div className="grid grid-cols-1 gap-y-16">
           {projects.map((project, index) => (

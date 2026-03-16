@@ -26,14 +26,6 @@ export default function ProductIndex() {
                 animate={{ opacity: 1, y: 0 }}
                 className="space-y-16 md:space-y-32"
             >
-                <div className="space-y-4 max-w-3xl">
-                    <h2 className="text-3xl md:text-5xl font-serif text-neutral-900 dark:text-neutral-100">
-                        Active Instrument
-                    </h2>
-                    <p className="text-lg text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
-                        The following stack represents our current commercial focus. <strong className="text-indigo-600 dark:text-indigo-400 font-normal hover:text-indigo-500 transition-colors">Please note: This product is currently in active development. No public versions have been released yet.</strong>
-                    </p>
-                </div>
 
                 <div className="grid grid-cols-1 gap-y-24 md:gap-y-32">
                     {products.map((product, index) => (
