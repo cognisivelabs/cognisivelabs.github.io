@@ -22,44 +22,6 @@ const projectData: Record<string, any> = {
                 content: 'To bridge the gap between creative brainstorming and production-ready architecture. From whiteboard to code in a single stroke.'
             }
         ]
-    },
-    'flow-mode': {
-        title: 'FlowMode',
-        subtitle: 'Biometric Writing Environments',
-        overview: 'FlowMode is a specialized research lab for VerveNote, designed to maximize human focus through adaptive computational environments.',
-        details: [
-            {
-                title: 'Adaptive Focus',
-                content: 'An interface that responds to your typing speed and rhythm. When you enter a state of high velocity, the UI recedes completely, leaving nothing but the current sentence.'
-            },
-            {
-                title: 'Digital Silence',
-                content: 'By leveraging local LLMs, FlowMode can summarize notifications or background noise in real-time, only alerting you if an event matches a high-priority "focus profile."'
-            },
-            {
-                title: 'Psychological Anchoring',
-                content: 'Experimental use of subtle visual cues—soft gradients and temporal shifts—to help anchor the user in a deep work state.'
-            }
-        ]
-    },
-    'conversational-ratio': {
-        title: 'The Conversational Ratio',
-        subtitle: 'Human-Centric Data Science',
-        overview: 'A deep-dive research project into the psychology of data collection, powering the core logic behind QuickForm.',
-        details: [
-            {
-                title: 'Trust Metrics',
-                content: 'We measure completion rates against variables like "conversational transparency," exploring how quickly users abandon a form when asked for sensitive data without context.'
-            },
-            {
-                title: 'Cognitive Load Analysis',
-                content: 'Our research shows that "one-question-at-a-time" interfaces reduce cognitive load by up to 40%, leading to higher quality responses and lower frustration.'
-            },
-            {
-                title: 'The Conversational Benchmark',
-                content: 'Establishing a new industry standard for what constitutes a "human" digital form experience, moving away from robotic input fields.'
-            }
-        ]
     }
 };
 

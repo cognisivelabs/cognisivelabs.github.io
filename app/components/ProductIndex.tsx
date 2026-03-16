@@ -5,18 +5,6 @@ import Link from 'next/link';
 
 const products = [
     {
-        name: 'QuickForm',
-        description: 'Conversational data engine for adaptive dialogues. Transform simple inputs into intelligent, schema-driven conversational flows.',
-        href: '/products/quickform',
-        status: 'In Development',
-        focus: 'Schema-Driven Logic',
-        capabilities: [
-            'Dynamic branching',
-            'Context-aware validation',
-            'Instant UI generation'
-        ]
-    },
-    {
         name: 'ZenDraw',
         description: 'Spatial-thinking instrument for infinite-canvas diagramming. A specialized environment for mapping complex mental models.',
         href: '/products/zendraw',
@@ -26,18 +14,6 @@ const products = [
             'Zero-latency ink engine',
             'Layered object mapping',
             'Real-time persistence'
-        ]
-    },
-    {
-        name: 'VerveNote',
-        description: 'Minimalist thought laboratory for deep focus. Designed to eliminate digital noise and foster psychological flow during research.',
-        href: '/products/vervenote',
-        status: 'In Development',
-        focus: 'FlowMode Engine',
-        capabilities: [
-            'Noise-elimination UI',
-            'Semantic organization',
-            'Adaptive focus modes'
         ]
     }
 ];

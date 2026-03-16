@@ -6,9 +6,7 @@ import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 
 const footerLinks = {
   solutions: [
-    { name: 'QuickForm', href: '/products/quickform' },
     { name: 'ZenDraw', href: '/products/zendraw' },
-    { name: 'VerveNote', href: '/products/vervenote' },
   ],
   company: [
     { name: 'About Us', href: '/about' },

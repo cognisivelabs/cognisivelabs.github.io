@@ -8,16 +8,6 @@ const projects = [
     slug: 'semantic-canvas',
     title: 'Semantic Canvas',
     description: 'An architectural blueprint for ZenDraw. AI-powered vector recognition that transforms rough sketches into intelligent, data-mapped objects.'
-  },
-  {
-    slug: 'flow-mode',
-    title: 'FlowMode',
-    description: 'The minimalist writing engine for VerveNote. An adaptive interface that eliminates digital noise to foster deep psychological flow.'
-  },
-  {
-    slug: 'conversational-ratio',
-    title: 'The Conversational Ratio',
-    description: 'An applied data-science implementation detailing how the tone and structure of forms impact user safety and completion rates.'
   }
 ];
 
