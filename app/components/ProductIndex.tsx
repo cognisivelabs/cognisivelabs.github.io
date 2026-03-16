@@ -28,10 +28,10 @@ export default function ProductIndex() {
             >
                 <div className="space-y-4 max-w-3xl">
                     <h2 className="text-3xl md:text-5xl font-serif text-neutral-900 dark:text-neutral-100">
-                        Software Instruments
+                        Active Instrument
                     </h2>
                     <p className="text-lg text-neutral-500 dark:text-neutral-400 font-light leading-relaxed">
-                        The following stack represents our core commercial pipeline. <strong className="text-indigo-600 dark:text-indigo-400 font-normal hover:text-indigo-500 transition-colors">Please note: All products are currently in active development. No public versions have been released yet.</strong>
+                        The following stack represents our current commercial focus. <strong className="text-indigo-600 dark:text-indigo-400 font-normal hover:text-indigo-500 transition-colors">Please note: This product is currently in active development. No public versions have been released yet.</strong>
                     </p>
                 </div>
 
